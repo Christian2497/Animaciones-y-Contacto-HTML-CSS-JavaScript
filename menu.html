@@ -4,20 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <title>Menu</title>
 </head>
-<body>
+<body class="body">
     <header>
         <nav>
-            <div id="nav">
+            <div class="nav">
                 <ul>
                     <li><a href="#">Inicio </a></li>
-                    <li><a href="#">Servicios </a></li>
+                    <li><a href="#">Servicios </a>
+                        <ul>
+                            <li>Submenu1</li>
+                            <li>Submenu2</li>
+                            <li>Submenu3</li>
+                            <li>Submenu4</li>
+                        </ul>
+                    </li>
                     <li><a href="#">Acerca de </a></li>
-                    <li><a href="#">Contacto </a></li>
+                    <li><a href="contacto.html"> Contacto </a></li>
                 </ul>
             </div>
         </nav>
     </header>
+
+    <!-- Slider main container -->
+    <div class="swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide">BCN</div>
+      <div class="swiper-slide">science</div>
+      <div class="swiper-slide">BCNscience</div>
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+  
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    </div>
+
+
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper-container', {
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            });
+    </script>
+
 </body>
 </html>

@@ -1,4 +1,4 @@
-.portada{
+.body{
     background: linear-gradient(#e8e8e8, #FFFFFF , #e8e8e8 );
     background-color: #e8e8e8;
 }
@@ -174,6 +174,65 @@
     padding: 30px;
 }
 
+.nav{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.nav ul{
+    list-style-type: none;
+    text-align: center;
+    background-color: red;
+    height: 30px;
+    margin: 5px;
+}
+
+.nav li:hover{
+    background-color: white;
+}
+
+.nav li a:hover{
+    color: black
+}
+
+.nav ul a{
+    color: white;
+    text-decoration: none;
+}
+
+.nav li{
+    display: inline;
+    text-align: center;
+    margin: 0 10px 0 0;
+    width:100%;
+    height: 100%;
+    border: 1px white solid;
+}
+
+.nav li ul{
+    display: none;
+}
+
+.nav li:hover > ul{
+    display: block;
+}
+
 .footer{
     background-color: red;
+}
+
+
+.swiper-container{
+    height: 300px;
+    width: 60%;
+    border: 4px #e0050b solid;
+    margin-top: 250px;
+}
+
+.swiper-slide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
 }
