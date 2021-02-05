@@ -7,40 +7,47 @@
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body class="body">
-    <div>
-        <div>
+    <div class="texto-contacto">
+        <div class="textoizq">
             <h2> Lorem ipsum </h2>
-            <p> In quis varius tortor. Mauris eget rutrum lorem, ut tristique ipsum. In egestas augue sit amet ultrices tincidunt. </p>
-            <h4> Maecenas scelerisque arcu vitae leo volutpat malesuada. Vivamus venenatis fringilla ligula, sit amet facilisis neque semper vitae. Aenean porta, leo quis euismod blandit, massa arcu mollis lacus, eu lacinia eros justo molestie velit. Proin a enim dui. Sed vitae porta ipsum, ut vulputate purus. </h4>
+            <h4> <b style="color:red"> In quis varius tortor. Mauris eget rutrum lorem, ut tristique ipsum. In egestas augue sit amet ultrices tincidunt. </b></h4>
+            <p> Maecenas scelerisque arcu vitae leo volutpat malesuada. <b>Vivamus venenatis fringilla ligula,</b> sit amet facilisis neque semper vitae. Aenean porta, leo quis euismod blandit, massa arcu mollis lacus,<b>eu lacinia eros justo molestie velit</b>. Proin a enim dui. Sed vitae porta ipsum, ut vulputate purus. </p>
         </div>
-        <div>
-            <div>
+        <div class="textoder">
+            <div class="textoder1">
                 <h3>
-                    ”Consectetur adipiscing elit*, ut tristique ipsum.”
+                    ”Consectetur adipiscing <br> elit*, ut tristique ipsum.”
                 </h3>
             </div>
             <p> * Donec facilisis bibendum interdum. </p>
         </div>
     </div>    
-    <div>
-        <h2> Form </h2>
+    <div class="form">
+        <h2> <b style="color:red"> Form </b></h2>
         <hr/>
         <div class="formulario"> 
             <form>
                 <div class="form-group">
-                    Name: <input type="text" class="form-control" id="name"/>
+                    <label for="name"> Name: </label>
+                    <input type="text" class="form-control" id="name"/>
                 </div>
                 <div class="form-group">
-                    Email: <input type="email" class="form-control" id="email" placeholder="example@address.com"/>
+                    <label for="email"> E-mail: </label>
+                    <input type="email" class="form-control" data-validation="email" id="email" placeholder="example@address.com"/>
                 </div>
-                <div>
+                <div class="form-group">
                     <input type="checkbox" name="terms" id="terms"> Accept terms of use</p>
                 </div>
-                <button type="submit" id="send">Send</button>
-            </form>
-            <div class="message-container">
-            </div>
+                <button type="submit" class="boton-form" onclick="return enviarFormulario()" id="send">Send</button>
+            </form> 
+            <br>
+            <div id="error"></div>
+            <div id="exito"></div>
         </div>
+        <hr/>
     </div>
+
+
+    <script src="js/Formulario.js"></script>
 </body>
 </html>
